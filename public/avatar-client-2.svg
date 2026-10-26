@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" rx="100" fill="#0B1120" />
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#FF7A1A" stroke-width="3" />
+  <!-- Shoulders -->
+  <path d="M42 190 C52 145 78 135 100 135 C122 135 148 145 158 190 Z" fill="#1E293B" />
+  <!-- Neck & Face -->
+  <rect x="90" y="110" width="20" height="30" rx="5" fill="#D9A882" />
+  <ellipse cx="100" cy="90" rx="30" ry="36" fill="#ECC2A0" />
+  <!-- Hair: clean cut -->
+  <path d="M68 85 C68 55 85 45 100 45 C115 45 132 55 132 85 C125 70 115 65 100 65 C85 65 75 70 68 85 Z" fill="#201C18" />
+  <!-- Beard trim -->
+  <path d="M78 95 C78 118 90 126 100 126 C110 126 122 118 122 95 C115 108 108 112 100 112 C92 112 85 108 78 95 Z" fill="#2D2721" />
+  <!-- Eyes & Smile -->
+  <circle cx="89" cy="88" r="2.5" fill="#17130F" />
+  <circle cx="111" cy="88" r="2.5" fill="#17130F" />
+  <path d="M94 106 C97 109 103 109 106 106" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+</svg>

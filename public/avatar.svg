@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#17130F" />
+      <stop offset="50%" stop-color="#231D16" />
+      <stop offset="100%" stop-color="#0B1120" />
+    </linearGradient>
+    <linearGradient id="orangeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A1A" />
+      <stop offset="100%" stop-color="#E0670F" />
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A241D" />
+      <stop offset="100%" stop-color="#14100C" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="400" height="400" rx="200" fill="url(#bgGrad)" />
+
+  <!-- Outer Ambient Ring -->
+  <circle cx="200" cy="200" r="192" fill="none" stroke="url(#orangeGlow)" stroke-width="6" opacity="0.8" />
+  <circle cx="200" cy="200" r="178" fill="none" stroke="#FF7A1A" stroke-dasharray="10 20" stroke-width="2" opacity="0.4" />
+
+  <!-- Tech Grid Background -->
+  <path d="M100 200 L300 200 M200 100 L200 300" stroke="#FF7A1A" stroke-width="1" opacity="0.15" />
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.08" />
+
+  <!-- Shoulders & Coat -->
+  <path d="M90 380 C110 300 150 270 200 270 C250 270 290 300 310 380 Z" fill="url(#suitGrad)" />
+  <!-- Shirt & Collar -->
+  <path d="M175 270 L200 320 L225 270 Z" fill="#F6F1E6" />
+  <path d="M190 270 L200 335 L210 270 Z" fill="#FF7A1A" />
+
+  <!-- Neck -->
+  <rect x="180" y="220" width="40" height="55" rx="10" fill="#E8B896" />
+  <path d="M180 240 C190 250 210 250 220 240 Z" fill="#D49E7C" opacity="0.5" />
+
+  <!-- Head Base -->
+  <ellipse cx="200" cy="180" rx="55" ry="68" fill="#FAD0B1" />
+
+  <!-- Hair -->
+  <path d="M142 165 C140 120 165 95 200 95 C240 95 260 120 258 165 C250 140 235 125 200 125 C165 125 150 140 142 165 Z" fill="#2B2118" />
+  <path d="M140 160 C145 130 170 105 205 105 C245 105 262 135 260 160 C250 140 230 125 200 125 C168 125 150 140 140 160 Z" fill="#17130F" />
+
+  <!-- Glasses / Modern Spec Frame -->
+  <rect x="162" y="165" width="30" height="22" rx="6" fill="none" stroke="#FF7A1A" stroke-width="3" />
+  <rect x="208" y="165" width="30" height="22" rx="6" fill="none" stroke="#FF7A1A" stroke-width="3" />
+  <line x1="192" y1="174" x2="208" y2="174" stroke="#FF7A1A" stroke-width="3" />
+
+  <!-- Eyes behind specs -->
+  <circle cx="177" cy="176" r="4" fill="#17130F" />
+  <circle cx="223" cy="176" r="4" fill="#17130F" />
+  <circle cx="178" cy="174" r="1.5" fill="#FFFFFF" />
+  <circle cx="224" cy="174" r="1.5" fill="#FFFFFF" />
+
+  <!-- Nose -->
+  <path d="M198 184 L196 198 L204 198" fill="none" stroke="#D49E7C" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Friendly Confident Smile -->
+  <path d="M185 212 C193 222 207 222 215 212" fill="none" stroke="#A86E50" stroke-width="3.5" stroke-linecap="round" />
+
+  <!-- Ear Details -->
+  <ellipse cx="144" cy="182" rx="7" ry="12" fill="#FAD0B1" />
+  <ellipse cx="256" cy="182" rx="7" ry="12" fill="#FAD0B1" />
+
+  <!-- Floating Tech Sparkle Accent -->
+  <path d="M310 110 L313 120 L323 123 L313 126 L310 136 L307 126 L297 123 L307 120 Z" fill="#FF7A1A" filter="url(#glow)" />
+  <path d="M90 140 L92 147 L99 149 L92 151 L90 158 L88 151 L81 149 L88 147 Z" fill="#FF7A1A" opacity="0.8" />
+  <circle cx="105" cy="270" r="3" fill="#22C55E" />
+</svg>

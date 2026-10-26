@@ -1,0 +1,210 @@
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+/* =========================================
+   1. Theme Variables
+   ========================================= */
+:root {
+  color-scheme: light;
+
+  --cream: #F6F1E6;
+  --cream-dark: #EFE8D8;
+  --ink: #17130F;
+  --ink-soft: #231D16;
+  --orange: #FF7A1A;
+  --orange-dark: #E0670F;
+  --muted: #6E6656;
+  --dark-canvas: #0A0F1D;
+  --dark-card: #14100C;
+  --green-live: #22C55E;
+
+  --bg-primary: var(--cream);
+  --text-primary: var(--ink);
+  --card-bg: #FFFFFF;
+  --card-border: rgba(23, 19, 15, 0.08);
+}
+
+html.dark {
+  color-scheme: dark;
+
+  --bg-primary: #120E0A;
+  --text-primary: var(--cream);
+  --card-bg: var(--dark-card);
+  --card-border: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   2. Text Selection
+   ========================================= */
+::selection {
+  background-color: var(--orange);
+  color: var(--ink);
+}
+
+::-moz-selection {
+  background-color: var(--orange);
+  color: var(--ink);
+}
+
+/* =========================================
+   3. Custom Scrollbar
+   ========================================= */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-dark);
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: var(--dark-card);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-dark);
+}
+
+/* =========================================
+   4. Base Styles
+   ========================================= */
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =========================================
+   5. Animations
+   ========================================= */
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes trace {
+  to {
+    stroke-dashoffset: -900;
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 122, 26, 0.55);
+  }
+
+  70% {
+    box-shadow: 0 0 0 18px rgba(255, 122, 26, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 122, 26, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-floatY {
+  animation: floatY 5s ease-in-out infinite;
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-pulseRing {
+  animation: pulseRing 2.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* =========================================
+   6. Micro-interactions
+   ========================================= */
+.tap-bounce {
+  transition:
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
+
+  will-change: transform;
+}
+
+.tap-bounce:active {
+  transform: scale(0.94);
+}
+
+.app-pill-btn {
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform, box-shadow;
+}
+
+.app-pill-btn:active {
+  transform: scale(0.95);
+}
+
+.glass-nav {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* =========================================
+   7. Custom Orange Glow Shadows
+   ========================================= */
+.shadow-glow-orange {
+  box-shadow: 0 8px 24px -4px rgba(255, 122, 26, 0.4);
+}
+
+.shadow-glow-orange-lg {
+  box-shadow: 0 14px 34px -4px rgba(255, 122, 26, 0.55);
+}
+
+.shadow-dark-card {
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6);
+}
